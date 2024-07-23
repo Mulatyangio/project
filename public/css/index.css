@@ -1,0 +1,57 @@
+*{
+            
+    align-items: center;
+}
+#services{
+    display: flex;
+    flex-direction: column;
+
+}
+body{
+    background-color: white;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    
+    
+}
+#sign input{
+    background-color: aliceblue;
+}
+#sign{
+    margin-top: 100px;
+}
+.button{
+  background-color: #4CAF50;
+  border: none;
+  padding: 15px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+
+}
+.house{
+    margin-top: 100px;
+    text-align: center;
+    color: black;
+}
+
+.house a{
+    text-decoration: none;    
+    background-color: aliceblue;
+    text-align: center;
+    width: 200px;
+    align-items: center;
+    margin-left: 600px;
+}
+.change{
+  color: black;
+}
+.change a{
+  text-decoration: underline;
+  color: purple;
+}
