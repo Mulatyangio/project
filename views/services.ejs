@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Services</title>
+    <link rel="shortcut icon" href="/images/uwezo-cleaning-company-high-resolution-logo-transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/pricing.css">
 </head>
 <body>
-    <%- include("header.ejs")%>
+    <header>
+        <%-include("header.ejs")%>
+    </header>
+    <section style="margin-top: 150px;">
+        
+    </section>
+    <main>
+        <section>
+            <h1>Our Services</h1>
+            <p>Choose the service that suits your needs</p>
+        </section>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h2>Carpet Cleaning</h2>
+               
+                <p>We charge basing on the size of the carpet and distance of pick up</p>
+                <ul>
+                    <li>Picking up carpet</li>
+                    <li>Dusting and washing</li>
+                    <li>Delivering after servcice</li>
+                </ul>
+                <a href="/payment" class="choose" >Choose Plan</a>            
+            </div>
+            <div class="pricing-card">
+                <h2>Office Cleaning</h2>
+                <p>We charge basing of the room size</p>
+                
+                <ul>
+                    <li>Absolute wall scrub</li>
+                    <li>Window Cleaning</li>
+                    <li>Floor Mopping</li>
+                    <li>Desk arrangement</li>
+                </ul>
+                <a href="/payment" class="choose" >Choose Plan</a>            
+            </div>
+            <div class="pricing-card">
+                <h2>House cleaning</h2>
+                <p>We charge basing of the room size</p>
+                
+                <ul>
+                    <li>All Standard Clean Services</li>
+                    <li>Deep Kitchen Cleaning</li>
+                    <li>Wall scrubbing</li>
+                </ul>
+                <a href="/payment" class="choose" >Choose Plan</a>            
+            </div>
+        </div>
+    </main>
+    <p>
+        THANK YOU FOR TRUSTING US TO KEEP YOU CLEAN
+    </p>
+        <%- include("footer.ejs")%>
 </body>
 </html>

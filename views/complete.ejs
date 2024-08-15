@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete order</title>
+    <link rel="shortcut icon" href="/images/uwezo-cleaning-company-high-resolution-logo-transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/order.css">
+</head>
+<body>
+    <%-include("header.ejs")%>
+     
+    <h1 style="margin-top: 160px;">complete Your Order?</h1>
+        <section class="win">
+          <form action="/order" method="post">
+              <select name="name" id="name">
+                <option value="Carpet">Carpet cleaning</option>
+                <option value="Office">Office cleaning</option>
+                <option value="house">House Cleaning</option>
+             </select>
+            
+             <label for="price">Amount Paid</label>
+             <input type="number" name="price" id="price">
+             <label for="feedback" >Feedback</label>
+            `<textarea name="feedback" id="feedback"></textarea>
+             <input type="submit" value="Complete">
+          </form>
+        </section>
+        
+</body>
+</html>

@@ -5,7 +5,7 @@
     <div class="container">
 
       <h1>
-        <a href="#" class="logo">Uwezo Cleaning Company</a>
+       <a href="/"> <img src="/images/uwezo-cleaning-company-high-resolution-logo-transparent.png" alt=" logo" style="height: 150px;"></a>
       </h1>
 
       <nav class="navbar container" data-navbar>
@@ -26,16 +26,27 @@
           <li class="navbar-item">
             <a href="/contact" class="navbar-link" data-nav-link>Contact Us</a>
           </li>
-
+          
+          <li class="navbar-item">
+            <a href="/pricing" class="navbar-link" data-nav-link>Pricing</a>
+          </li>
+          <li class="navbar-item">
+            <a href="/FAQ" class="navbar-link" data-nav-link>FAQ</a>
+          </li>
         </ul>
       </nav>
-      <% if (locals.user){%>
-        <a href="/profile"><%=locals.user.first_name%></a>
-        <a href="/logout">Logout</a>
-        <% }else{%>
+       <% if(locals.user && locals.user.email.includes("uwezo.co.ke")){%>
+         <a href="/adminprofile"><%= locals.user.username %></a>
+         <a href="/logout">Logout</a>
+         <%} else if (locals.user){%>
+          <a href="/profile"><%=locals.user.first_name%></a>
+          <a href="/logout">Logout</a>
+        
+        <%}else{%>
             <button class="btn btn-secondary" ><a href="/signup">Get Started</a></button>
             <button class="btn btn-secondary" ><a href="/signin">Sign In</a></button>
         <%} %>    
+        
      
       <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggle-btn>
         <ion-icon name="menu-outline" class="menu-icon"></ion-icon>

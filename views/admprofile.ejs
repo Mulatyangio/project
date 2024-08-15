@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Profile</title>
+</head>
+<link rel="shortcut icon" href="/images/uwezo-cleaning-company-high-resolution-logo-transparent.png" type="image/x-icon">
+<link rel="stylesheet" href="css/profile.css">
+<body>
+    <%-include("header.ejs")%>
+   
+    <div id="greetings">
+        <% const hour = new Date().getHours() %>
+        <%   if (hour < 12) { %> 
+            <p> Good Morning <%= locals.userame%> </p>  
+        <% } else if (hour < 16) { %>
+            <p> Good Afternoon <%= locals.username%> </p>  
+        <% }else{ %>
+            <p> Good Evening <%= locals.username%> </p> 
+        <% } %> 
+    </div>
+    <div id="admin">
+        <h1>Welcome to your Dashboard</h1>
+    </div>
+    <div class="board">
+        <h3><a href="/update">Update your team</a></h3>
+    </div>
+
+
+    <% if(locals.message){%>
+        <p style="background-color: rgba(122, 35, 156, 0.548); color: azure; text-align: center; padding: 12px; border-radius: 10px;">Order went through Successfully!!!</p>
+    <%}%>
+</body>
+<script src="/js/script.js"></script>
+</html>

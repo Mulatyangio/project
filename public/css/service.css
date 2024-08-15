@@ -1,0 +1,50 @@
+body{
+    margin-top: 170px;
+}
+.carpet{
+    background-color: aliceblue;
+    text-align: center;
+    color: black;
+    height: 250px;
+
+}
+.carpet ul{
+    background-color: white;
+    width: 600px;
+    margin-left: 350px;
+    border-radius: 20px;
+    margin-top: 19px;
+}
+
+.carpet h4{
+    text-decoration: underline
+}
+.hot{
+    background-color: #FF69B4;
+}
+.house{
+    background-color: rgb(186, 205, 223);
+    text-align: center;
+    color: black;
+    height: 250px;
+}
+.office{
+    background-color: rgb(137, 185, 230);
+    text-align: center;
+    color: black;
+    height: 250px;
+}
+.office ul{
+    background-color: white;
+    width: 600px;
+    margin-left: 350px;
+    border-radius: 20px;
+    margin-top: 19px;
+}
+.house ul{
+    background-color: white;
+    width: 600px;
+    margin-left: 350px;
+    border-radius: 20px;
+    margin-top: 19px;
+}

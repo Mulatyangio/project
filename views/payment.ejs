@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pay</title>
+    <link rel="shortcut icon" href="/images/uwezo-cleaning-company-high-resolution-logo-transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/pay.css">
+</head>
+<body>
+    <%-include("header.ejs")%>
+    <section class="pay">
+        <h1>Which payment method would you prefer?</h1>
+        <div class="pay-card">
+            <img src="/images/paympesa.png" alt="M-pesa">
+            <a href="/records">M-pesa</a>
+        </div>
+        <div class="pay-card">
+            <img src="/images/paypal.png" alt="paypal">
+            <a href="/records">PayPal</a>
+        </div>
+        <div class="pay-card">
+            <img src="/images/binance pay.png" alt="binance ">
+            <a href="/records">Binance</a>
+        </div>
+        <div class="pay-card">
+            <img src="/images/cards.png" alt="card">
+            <a href="#">Card</a>
+        </div>
+    </section>
+   
+    <%-include ("footer.ejs")%>   
+</body>
+</html>

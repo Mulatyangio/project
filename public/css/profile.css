@@ -1,0 +1,20 @@
+   body{
+    margin-top: 170px;
+    align-items: center;
+    text-align: center;
+
+   }
+   #ordered {
+      color: black;
+      margin-top: 20px;
+   }
+   #greetings{
+      color: black;
+      font-size: 30px;
+   }
+   table{
+      align-items: center;
+      justify-content: center;
+      margin-left: 350px;
+      color: black;
+   }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ's</title>
+    <link rel="shortcut icon" href="/images/uwezo-cleaning-company-high-resolution-logo-transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/FAQ.css">
+</head>
+<body>
+    <%-include("header.ejs")%>
+    <section class="FAQ">
+        <h1>FAQ'S</h1>
+        <p>These are some of the questions that we have received,if you still have other questions you're free to type them down below and we will get back to you</p>
+    </section>
+
+    <div class="FAQ-container">
+        <div class="question">
+            <h2>Q: Why should I select Uwezo cleaning as my housecleaning service?</h2>
+            <p>A: Our Quality Assurance program gives you confidence that our rigorous housecleaning standards are followed diligently by our highly trained employees, who all care about the quality of the work they do in your home. We are completely committed to the continuous improvement of all our procedures and policies. Our people value what they receive and value the homes they clean. We invest in training and development of our employees in order to bring to the market the very best in professionalism and latest in industry trends.</p>
+        </div>
+        <div class="question">
+           <h2>Q: What happens if one of Uwezo's employees has an accident in my home?</h2> 
+           <p>A: An accident or injury in your home during house cleaning time is covered under our workers’ compensation program and does not involve the homeowners insurance in any way.</p> 
+        </div>
+        <div class="question">
+              <h2>Q: Do you bring the cleaning supplies and equipment?</h2>  
+            <p>A: Absolutely! Our teams of expert house cleaners bring everything needed to get your home sparkling!</p>
+        </div>
+        <div class="question">
+            <h2>Q:Will you send the same cleaning crew each time?</h2> 
+            <p>A: We make every attempt to send the same cleaning crew, however we may have to switch personnel in the event of an illness or vacation. If we send a substitute, you can be assured that we are sending a skilled, trained technician and there is always a supervisor in the home. The crew carries specific instructions about what we do in your home and the work is checked by the supervisor.</p>
+        </div>
+    </div>
+    <textarea name="question" id="question" placeholder="Question" style="width: 300px; height: 90px; margin-left: 500px;"></textarea>
+    <input type="submit" name="submit" id="submit" style="background-color: rgb(236, 184, 116); width: 300px; margin-left: 500px;">
+    <%- include("footer.ejs")%>
+</body>
+</html>

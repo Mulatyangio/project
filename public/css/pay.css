@@ -1,0 +1,24 @@
+body{
+    margin-top: 150px;
+    
+}
+.pay{
+    color: black;
+    text-align: center;
+}
+.pay-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 300px;
+    background-color: aqua;
+    width:50%;
+    height: 100px;
+    border-radius: 10px;
+}
+.pay-card a{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

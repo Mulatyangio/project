@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Profile</title>
+</head>
+<link rel="shortcut icon" href="/images/uwezo-cleaning-company-high-resolution-logo-transparent.png" type="image/x-icon">
+<link rel="stylesheet" href="css/profile.css">
+<body>
+    <%-include("header.ejs")%>
+   
+    <div id="greetings">
+        <% const hour = new Date().getHours() %>
+        <%   if (hour < 12) { %> 
+            <p> Good Morning <%= locals.user.first_name%> </p>  
+        <% } else if (hour < 16) { %>
+            <p> Good Afternoon <%= locals.user.first_name%> </p>  
+        <% }else{ %>
+            <p> Good Evening <%= locals.user.first_name%> </p> 
+        <% } %> 
+    </div>
+    <div id="ordered">
+        <h1>These are the services you have had:</h1>
+    </div>
+    <div class="serve">
+        <table>
+            <tr>
+                <th>service name</th>
+                <th>service status</th>
+                <th>Price</th>
+                <th>Service provider</th>
+                <th>Employees Phone number</th>
+            </tr>
+        <% bookings.reverse().forEach(booking=>{ %>
+            <tr>
+                <td><%=booking.name%></td>
+                <td><%=booking.status%></td>
+                <td><%=booking.price%></td>
+                <td><%=booking.first_name%></td>
+                <td><%=booking.phone%></td>
+                
+            </tr>
+        <%})%>
+    </table>
+    </div>
+
+    <% if(locals.message){%>
+        <p style="background-color: rgba(122, 35, 156, 0.548); color: azure; text-align: center; padding: 12px; border-radius: 10px;">Order went through Successfully!!!</p>
+    <%}%>
+</body>
+
+<script src="/js/script.js"></script>
+</html>

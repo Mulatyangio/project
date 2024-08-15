@@ -1,0 +1,33 @@
+body{
+    margin-top: 150px;
+}
+.FAQ{
+    color: black;
+    text-align: center;
+    justify-content: center;
+    background-color: khaki;
+    
+    
+}
+.FAQ p{
+    font-size: 18px;
+    width: 500px;
+    margin-left: 400px;
+}
+.FAQ h1{
+    text-decoration: underline;
+    color: rgb(206, 20, 206);
+}
+.FAQ-container{
+    color: black;
+    font-size: 15px;
+    justify-content: center;
+    margin-top: 10px;
+   
+}
+.question{
+    margin-top: 20px;
+    background-color: rgb(247, 217, 217);
+    padding: 20px;
+    margin-bottom: 10px;
+}
