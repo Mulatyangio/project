@@ -25,11 +25,13 @@ app.use((req,res,next)=>{
     if(req.session && req.session.user){
         res.locals.user=req.session.user       
         
-        if(req.session.user.email.includes("uwezo.co.ke") && adminRoutes.includes(req.path)){
-            next()
-        }else{
+        if(!req.session.user.email.includes("uwezo.co.ke")  && adminRoutes.includes(req.path) ){
             res.status(401).send('unauthorized access.Only admins can access this route')
+            
+        }else{
+            next()
         }
+       
 
     }else if(privateRoutes.includes(req.path)|| adminRoutes.includes(req.path)){
         res.status(401).send('unauthorized access.Log in first')
@@ -180,7 +182,7 @@ app.get('/logout',(req,res)=>{
             res.status(500).send('server error')}
             else{ 
                 res.redirect('/')}
-    });
+    })  ;
    
 })
 app.get("/services",(req,res)=>{
