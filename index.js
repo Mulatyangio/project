@@ -13,7 +13,7 @@ const dbconn=mysql.createConnection({
 const app = express()
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'));
-app.use(sess({
+app.use(sess({    
     secret:'your encryptionkey',
     resave:false,
     saveUninitialized:true,
