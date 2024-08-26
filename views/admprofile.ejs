@@ -11,7 +11,7 @@
     <div id="greetings">
         <% const hour = new Date().getHours() %>
         <%   if (hour < 12) { %> 
-            <p> Good Morning <%= locals.userame%> </p>  
+            <p> Good Morning <%= locals.user.userame%> </p>  
         <% } else if (hour < 16) { %>
             <p> Good Afternoon <%= locals.username%> </p>  
         <% }else{ %>

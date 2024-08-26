@@ -21,7 +21,7 @@ app.use(sess({
 }))
 app.use((req,res,next)=>{
     const privateRoutes=['/profile','/order']
-    const adminRoutes=['/update','/admprofile', "/adminprofile"]
+    const adminRoutes=['/update','/admprofile', "/adminprofile","/UpdateEmployees"]
     if(req.session && req.session.user){
         res.locals.user=req.session.user       
         
@@ -174,7 +174,34 @@ app.post('/order',(req,res)=>{
                     }) 
             }
     )
-   
+    app.get('/updateorders',(req,res)=>{
+        dbconn.query(`SELECT * FROM bookings JOIN employees ON bookings.employee_id=employees.employee_id`,(err,result)=>{
+            if(err){
+                console.log(err);
+                res.status(500).send('Server Error')
+            }else if(req.session.user){
+                console.log(result);
+                
+                res.render('orderup.ejs',{user:req.session.user,bookings: result })
+                }else{
+                    res.redirect('/adminsign')
+                    }})
+    })
+    
+app.get('/UpdateEmployees',(req,res)=>{
+    res.render('emp.ejs')
+})
+app.post('/UpdateEmployees',(req,res)=>{
+    dbconn.query(`INSERT INTO employees(first_name,last_name,phone,email,position) VALUES("${req.body.first_name}","${req.body.last_name}","${req.body.phone}","${req.body.email}","${req.body.position}")`,(err,result)=>{
+        if(err){
+            console.log(err);
+            res.status(500).send('Server Error')
+            }else{
+                res.redirect('/adminprofile?message')
+                
+    }})
+                
+    })
 
 app.get('/logout',(req,res)=>{
     req.session.destroy(err=>{
@@ -192,7 +219,7 @@ app.get("/services",(req,res)=>{
 app.get('/admprofile',(req,res)=>{
     res.render('admprofile.ejs')
 })
-    
+     
 
 
 app.get("/about",(req,res)=>{
