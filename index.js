@@ -253,6 +253,9 @@ app.get('/payment',(req,res)=>{
 app.get('/FAQ',(req,res)=>{
     res.render('FAQs.ejs')
 })
+app.post('/FAQ',(req,res)=>{
+    `INSERT INTO faq $`
+})
 app.get('/update',(req,res)=>{
     res.render('update.ejs')
 })
