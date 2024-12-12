@@ -30,5 +30,13 @@
     </section>
    
     <%-include ("footer.ejs")%>   
+    <script>
+        
+    fetch('/get-access-token')
+     .then(response => response.json())
+     .then(data => console.log(data.token))
+     .catch(error => console.error('Error:', error));
+
+    </script>
 </body>
 </html>

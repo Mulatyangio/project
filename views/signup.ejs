@@ -14,7 +14,7 @@
    
     <section id="sign">
         <%- include('header.ejs')%>
-      <h1>SignUp</h1>
+      <h1 style="color: black;">SignUp</h1>
     <% if(locals.errorMessage){%>
         <p style="color: orangered;"><%= locals.errorMessage%></p>
     <%}%>
@@ -41,13 +41,13 @@
             <input type="text" name="email" id="email" required>
         </div>
         <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
+            <label for="password" >Password</label>
+            <input type="password" name="password" id="password" required style="color: black;">
             <p id="passworderror"></p>
         </div>
         <div>
             <label for="confirmPassword">Confirm Password</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" required>
+            <input type="password" name="confirmPassword" id="confirmPassword" required style="color: black;">
             <p id="confirmPassworderror"></p>
         </div>
         <input type="submit" value="SignUp" class="button">
